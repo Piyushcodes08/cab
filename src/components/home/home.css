@@ -1,0 +1,68 @@
+.home{
+    background-image: url(../../assets/jaselmair.jpg);
+    background-size: cover;
+}
+.home-container{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 8rem;
+    padding-top: 1.75rem;
+}
+.home-subtitle{
+display: inline-flex;
+text-transform: capitalize;
+align-items: center;
+column-gap: 0.5rem;
+color: #f2ca1c;
+font-size:var(--large-font-size);
+font-weight: var(--weight-700);
+}
+.home-subtitle span{
+    color: #31468e;
+   font-size: 24px;
+
+}
+.home-title,
+.home-description{
+    color: var(--white-color);
+}
+.home-title{
+    font-size: var(--big-font-size);
+    margin-block: 1rem;
+}
+.home-description{
+    margin-bottom: 2.25rem;
+}
+.home-img{
+    justify-self: end;
+    /* height: 550px; */
+}
+.booking{
+    max-width: 1100px;
+    padding-block: 5rem;
+}
+.booking-form{
+    background-color: var(--white-color);
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    grid-template-columns: repeat(2, 1fr)max-content 1fr max-content;
+    align-items: center;
+    column-gap: 3.5rem;
+    
+}
+.booking-item{
+    border: 1px solid #f2ca1c;;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.75rem;
+    box-shadow: inset 0 0 10px #f2ca1c;
+}
+.booking-input{
+    width: 100%;
+}
+.booking-item{
+    color: var(--title-color);
+    font-size: var(--large-font-size);
+}

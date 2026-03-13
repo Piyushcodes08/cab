@@ -1,0 +1,27 @@
+.about-container{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 2.5rem;
+}
+.about-img{
+    justify-self: center;
+    border-radius: 40px;
+}
+.about-data{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.about-item{
+    text-align: center;
+}
+.about-no{
+    color: #31468e;
+    font-size: var(--big-font-size);
+    font-weight: var(--weight-900);
+}
+.about-title{
+    font-size: var(--large-font-size);
+    font-weight:var(--weight-700);
+}

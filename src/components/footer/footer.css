@@ -1,0 +1,101 @@
+.footer{
+    background-color: hsl(var(--hue), 0%, 10%);
+    padding-block: 4.5rem 3.5rem;
+}
+.footer-container{
+    
+    grid-template-columns: repeat(4, max-content);
+    justify-content: space-between;
+}
+
+.footer-description,
+.footer-title,
+.footer-link,
+.footer-icon,
+.footer-info{
+    color: var(--white-color);
+}
+.footer-description{
+    max-width: 300px;
+    margin-block: 2rem;
+}
+.footer-socials{
+    display: flex;
+    column-gap: 1.25rem;
+}
+.footer-social-link{
+    border: 2px solid var(--border-color);
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    color: var(--border-color);
+    display: grid;
+    place-items: center;
+    font-size: var(--small-font-size);
+    transition: background 0.3s color 0.3s;
+}
+.footer-social-link:hover{
+    background-color: var(--border-color);
+    color: var(--white-color);
+}
+.footer-title{
+    font-size: var(--large-font-size);
+    position: relative;
+    padding-bottom: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+.footer-title::after,
+.footer-title::before{
+ content: '';
+    position: absolute;
+     background-color: var(--white-color);
+}
+.footer-title::before{
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    border-radius: 1rem;
+}
+.footer-title::after{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    bottom: -3px;
+    left: 50px;
+}
+.footer-links,
+.footer-contact{
+    row-gap: 1.25rem;
+}
+.footer-link{
+    font-size: var(--large-font-size);
+    text-transform: capitalize;
+    transition: color 0.3s;
+}
+.footer-link:hover{
+    color: var(--border-color);
+}
+.footer-item{
+    display: flex;
+    align-items: center;
+    column-gap: 0.75rem;
+}
+.footer-icon{
+    font-size: var(--large-font-size);
+}
+.footer-info{
+      font-size: var(--large-font-size);
+      max-width: 300px; 
+}
+.footer-gallery{
+    grid-template-columns: repeat(3, max-content);
+    gap: 0.75rem;
+}
+.footer-logo-img{
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.footer-logo-img:hover{
+    transition: opacity 0.9;
+}

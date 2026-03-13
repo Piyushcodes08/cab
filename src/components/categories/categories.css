@@ -1,0 +1,33 @@
+.categories-img{
+    width: 100%;
+}
+.categories-img{
+height: 384px;
+width: 275px;
+
+}
+.categories-img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+border-top-left-radius: 45%;
+border-top-right-radius: 45%;
+overflow: hidden;
+}
+.categories-title{
+    position: absolute;
+    left: 0;
+    bottom: 1.5rem;
+    color: #31468e;
+    font-size: var(--large-font-size);
+    font-weight: var(--weight-700);
+    background-color:white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0 2rem 2rem 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-transform: capitalize;
+}
+.categories-slide:hover .categories-title{
+    opacity: 1;
+}
