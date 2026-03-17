@@ -1,23 +1,28 @@
 import React from 'react'
 import './about.css'
-import aboutimg from '../../assets/bg-taxi.jpg'
 import TitleSection from '../titlesection/TitleSection'
 import { Link as ScrollLink } from 'react-scroll';
 import { RiTelegram2Fill } from "react-icons/ri";
-
+import AboutGame from './AboutGame';
 
 const About = () => {
   return (
     <>
-      <section className="about section " id="about">
-        <div className="about-container container grid" >
-          <img src={aboutimg} alt="" className="about-img" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1500" />
-          <div className="about-content" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1500">
+      <section className="about section" id="about">
+        <div className="about-container container grid">
+
+          {/* ===== LEFT: Gen Z Travel Game ===== */}
+          <div className="about-game-col" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+            <AboutGame />
+          </div>
+
+          {/* ===== RIGHT: Content ===== */}
+          <div className="about-content" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
             <TitleSection
               subtitle={'We Are Trawind'}
               title={"Exploring the World, One Destination at a Time with Us"}
-              description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              } />
+              description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+            />
             <div className="about-data">
               <div className="about-item">
                 <p className="about-no">25+</p>
@@ -32,8 +37,11 @@ const About = () => {
                 <h3 className="about-title">Awards Winning</h3>
               </div>
             </div>
-             <ScrollLink to='/' className='button'> About More <RiTelegram2Fill className='button-icon' /></ScrollLink>
+            <ScrollLink to='destination' smooth duration={500} className='button'>
+              About More <RiTelegram2Fill className='button-icon' />
+            </ScrollLink>
           </div>
+
         </div>
       </section>
     </>

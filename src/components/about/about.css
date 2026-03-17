@@ -1,27 +1,99 @@
-.about-container{
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+/*=============== ABOUT ===============*/
+.about-container {
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  column-gap: 4rem;
+}
+
+/* Left game column — full width & height */
+.about-game-col {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Game wrapper fills the column */
+.about-game-col .ag-wrap {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+}
+
+/* Game card fills the wrapper */
+.about-game-col .ag-card {
+  flex: 1;
+  width: 100%;
+}
+
+/* Right content column */
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stats row */
+.about-data {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.about-item {
+  text-align: center;
+  flex: 1;
+}
+
+.about-no {
+  color: #31468e;
+  font-size: var(--big-font-size);
+  font-weight: var(--weight-900);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.about-title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--weight-700);
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Large screens — keep both columns balanced */
+@media screen and (max-width: 1400px) {
+  .about-container {
+    column-gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 1208px) {
+  .about-container {
     column-gap: 2.5rem;
+  }
 }
-.about-img{
-    justify-self: center;
-    border-radius: 40px;
-}
-.about-data{
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 3rem;
-}
-.about-item{
+
+/* Stack on tablet */
+@media screen and (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr !important;
+    row-gap: 3rem;
+  }
+  .about-game-col {
+    max-width: 480px;
+    margin-inline: auto;
+  }
+  .about-content {
     text-align: center;
+    align-items: center;
+  }
+  .about-data {
+    justify-content: center;
+  }
 }
-.about-no{
-    color: #31468e;
-    font-size: var(--big-font-size);
-    font-weight: var(--weight-900);
-}
-.about-title{
-    font-size: var(--large-font-size);
-    font-weight:var(--weight-700);
+
+@media screen and (max-width: 576px) {
+  .about-data {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
