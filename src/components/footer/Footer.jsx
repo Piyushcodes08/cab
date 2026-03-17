@@ -65,7 +65,7 @@ const footer = () => {
           <div className="footer-gallery grid">
             {footerGallery.map((footerGallery, index) => {
             return(
-              <img src={footerGallery} alt="footerGallery" className="footer-img" key={index} />
+              <img src={footerGallery} alt="footerGallery" className="footer-img" key={index} loading="lazy" decoding="async" />
             )
           })}
           </div>

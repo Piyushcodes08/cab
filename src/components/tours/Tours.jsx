@@ -41,17 +41,43 @@ const Tours = () => {
         spaceBetween={24}
         grabCursor={true}
         loop={true}
-        autoplay={{ delay: 4500, disableOnInteraction: false }}
+        autoplay={{
+          delay: 4500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         onBeforeInit={(swiper) => {
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
         }}
-        navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
+        onSwiper={(swiper) => {
+          // Force update to ensure navigation refs are assigned correctly after mount
+          setTimeout(() => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.destroy();
+            swiper.navigation.init();
+            swiper.navigation.update();
+          });
+        }}
+        navigation={{
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
+        }}
         modules={[Navigation, Autoplay]}
         breakpoints={{
-          640:  { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1400: { slidesPerView: 4, spaceBetween: 28 },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 24,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 28,
+          },
         }}
         data-aos="fade-up"
         data-aos-delay="100"
@@ -63,7 +89,7 @@ const Tours = () => {
 
               {/* Image */}
               <div className="tour-img-box">
-                <img src={img} alt={title} className="tour-img" />
+                <img src={img} alt={title} className="tour-img" loading="lazy" decoding="async" />
                 <div className="tour-img-overlay" />
 
                 {/* Stars badge floating on image */}

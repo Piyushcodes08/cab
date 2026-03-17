@@ -30,10 +30,7 @@
   cursor: default;
   display: flex;
   flex-direction: column;
-}
-.tour-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 18px 48px rgba(49, 70, 142, 0.17);
+  gap: 10px;
 }
 
 /* ===== IMAGE BOX ===== */

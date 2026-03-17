@@ -60,7 +60,7 @@ const Categories = () => {
             return (
               <SwiperSlide className='categories-slide' key={index}>
                <div  className="categories-img" >
-                 <img src={img} alt="categories-img"/>
+                 <img src={img} alt="categories-img" loading="lazy" decoding="async"/>
                </div>
                 <h3 className="categories-title">
                   {title}

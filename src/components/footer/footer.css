@@ -3,7 +3,6 @@
     padding-block: 4.5rem 3.5rem;
 }
 .footer-container{
-    
     grid-template-columns: repeat(4, max-content);
     justify-content: space-between;
 }
@@ -97,5 +96,62 @@
     transition: opacity 0.3s;
 }
 .footer-logo-img:hover{
-    transition: opacity 0.9;
+    opacity: 0.9;
+}
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    row-gap: 3rem;
+  }
+
+  .footer-logo-img,
+  .footer-description,
+  .footer-socials {
+    margin-inline: auto;
+  }
+
+  .footer-item {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer-info {
+    max-width: 250px;
+    margin-inline: 0;
+    text-align: left; /* Keep text left aligned to icon, but center the group */
+  }
+
+  /* To center the group of items in the grid */
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-title::after,
+  .footer-title::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-title::after {
+    left: calc(50% + 25px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
 }

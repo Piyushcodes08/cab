@@ -22,7 +22,7 @@ const Destination = () => {
   return(
     <div className="destination-item" key={id}>
       <div className="destination-img">
-        <img src={img} alt={title}   data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500"/>
+        <img src={img} alt={title} loading="lazy" decoding="async" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500"/>
       </div>
       <div className="destination-details">
         <div className="destination-top">
